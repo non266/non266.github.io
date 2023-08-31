@@ -1,0 +1,26 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "setting hide on the top right corner of the screen\r\n\r\nI am looking for a solution for 8K, not available for now\r\n8k效果不行,加载也久,正在找新的办法,暂时不提供8K了\r\n设置请移动鼠标到右上角!\r\nbug反馈/建议 Q群 634399554 _(:з」∠)_",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			}
+		}
+	},
+	"preview" : "preview.gif",
+	"tags" : [ "Anime" ],
+	"title" : "L2D 碧蓝档案 8K | Blue Archive | ブルーアーカイブ | 未花 | mika | ミカ",
+	"type" : "Web",
+	"version" : 11,
+	"visibility" : "public",
+	"workshopid" : "2922877436",
+	"workshopurl" : "steam://url/CommunityFilePage/2922877436"
+}
