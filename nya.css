@@ -1,0 +1,11 @@
+* {
+	padding:0px;
+	margin:0px;
+}
+body {
+	padding:4px;
+}
+body,td,div {
+	font-family:Arial,sans-serif;
+	font-size:45px;
+}

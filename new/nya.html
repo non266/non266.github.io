@@ -1,0 +1,181 @@
+﻿﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=512">
+    <meta name="robots" content="noindex, nofollow">
+    <title>喵!喵!</title>
+    <link rel="stylesheet" href="/nya.css" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body onload="fun();">
+    <center>
+        <br>
+        <br>
+        <nobr>
+            猫娘
+        </nobr>
+        <nobr>
+            <a href="/new/setting.html">设置</a>
+        </nobr>
+        <style>
+            input {
+                height: 50px;
+                width: 150px;
+                font-size: 20px;
+            }
+        </style>
+        <canvas id="myCanvas" width="200" height="100">
+        </canvas>
+        <script>
+            function dateState(date = new Date()) {
+                // 获取当前小时
+                let hours = date.getHours()
+                if (hours >= 6 && hours < 12) {
+                    return '上午好'
+                } else if (hours >= 12 && hours < 18) {
+                    return '下午好'
+                } else {
+                    return '晚上好'
+                }
+            }
+            function mo() {
+                s = ["喵！才……才不是要被摸摸呢（傲娇）", "呼噜呼噜……喵！怎么是你！我才不要你摸！", "喵……suki", "喵……喵……想要……", "喵……想要更多哦喵……"];
+                const randomNum = Math.floor(Math.random() * 5);;
+                var canvas = document.getElementById("myCanvas");
+                if (canvas.getContext) {
+                    alert(s[randomNum]);
+                }
+            }
+            function nya() {
+                var audio = new Audio('/nya.mp3');
+                audio.play();
+            }
+            function baka() {
+                var audio = new Audio('/baka.mp3');
+                audio.play();
+                var canvas = document.getElementById("myCanvas");
+                if (canvas.getContext) {
+                    alert("喵!主人大笨蛋!");
+                }
+            }
+            function fun() {
+                const currentDate = new Date();
+
+                // 获取当前年份、月份、日期
+                const currentYear = currentDate.getFullYear();
+                const currentMonth = currentDate.getMonth() + 1; // 注意月份是从 0 开始计算的，所以要加 1
+                const currentDay = currentDate.getDate();
+                v = localStorage.getItem("date")
+                // 创建一个表示要判断的时间的 Date 对象
+                const targetDate = new Date(v);  // 这里假设要判断的时间是 2023 年 2 月 25 日
+                //console.log(v);
+                // 获取要判断的时间的年份、月份、日期
+                const targetYear = targetDate.getFullYear();
+                const targetMonth = targetDate.getMonth() + 1;
+                const targetDay = targetDate.getDate();
+                var d = localStorage.getItem("day");
+                if (d == null) {
+                    day = 0;
+                }
+                else {
+                    day = d;
+                }
+                // 判断年份、月份、日期是否都相等
+                if (currentYear === targetYear && currentMonth === targetMonth && currentDay === targetDay) {
+                    //console.log('要判断的时间是今天');
+
+                    var l = localStorage.getItem("name");
+
+                    if (l == null) {
+
+                    }
+                    else {
+                        var oB = document.getElementById("pid");
+                        oB.innerHTML = l + "~" + dateState() + "~喵,今天签到了~喵,累计签到了" + day + "天~喵"
+                    }
+                    return 1;
+                }
+                else {
+                    //console.log('要判断的时间不是今天');
+
+                    var l = localStorage.getItem("name");
+                    if (l == null) {
+
+                    }
+                    else {
+                        var oB = document.getElementById("pid");
+                        oB.innerHTML = l + "~" + dateState() + "~喵,今天还没签到~喵,累计签到了" + day + "天~喵"
+                        da = 0;
+                        return 0;
+                    }
+                }
+
+            }
+            function qd() {
+                var day = new Number(localStorage.getItem("day"));
+                var day1 = day += 1;
+                if (fun() == 0) {
+                    var call = localStorage.getItem("name");
+                    var canvas = document.getElementById("myCanvas");
+                    if (canvas.getContext) {
+
+                        alert(call + "~签到成功~喵");
+                    }
+                    localStorage.setItem("qiandao", "1");
+                    localStorage.setItem("date", new Date());
+                    localStorage.setItem("day", day1);
+
+                }
+                else {
+                    if (fun() == 1) {
+                        var call = localStorage.getItem("name");
+                        var canvas = document.getElementById("myCanvas");
+                        if (canvas.getContext) {
+
+                            alert(call + "~今天签到过了~喵");
+                        }
+                    }
+                }
+                window.location.reload();
+            }
+        </script>
+        <table cellspacing="0" width="1480px">
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+
+                            <p id="pid">本猫娘还不知道主人怎么称呼~喵,请主人到设置中更改~喵</p>
+                            <input type="button" value="签到" onclick="qd()">
+                            <input type="button" value="喵!喵!" onclick="nya()">
+                            <input type="button" value="摸摸猫娘" onclick="mo()">
+                            <input type="button" value="撅猫娘" onclick="baka()">
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+            </tr>
+        </table>
+        <table cellspacing="0" width="1480px">
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="/new/index.html">返回主页</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
