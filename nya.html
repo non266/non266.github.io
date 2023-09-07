@@ -20,8 +20,8 @@
         </nobr>
         <style>
             input {
-                height: 50px;
-                width: 150px;
+                height: 60px;
+                width: 250px;
                 font-size: 20px;
             }
         </style>
@@ -40,7 +40,7 @@
                 }
             }
             function mo() {
-                s = ["喵！才……才不是要被摸摸呢（傲娇）", "呼噜呼噜……喵！怎么是你！我才不要你摸！", "喵……suki", "喵……喵……想要……", "喵……想要更多哦喵……"];
+                var s = ["喵！才……才不是要被摸摸呢（傲娇）", "呼噜呼噜……喵！怎么是你！我才不要你摸！", "喵……suki", "喵……喵……想要……", "喵……想要更多哦喵……"];
                 const randomNum = Math.floor(Math.random() * 5);;
                 var canvas = document.getElementById("myCanvas");
                 if (canvas.getContext) {
@@ -66,10 +66,9 @@
                 const currentYear = currentDate.getFullYear();
                 const currentMonth = currentDate.getMonth() + 1; // 注意月份是从 0 开始计算的，所以要加 1
                 const currentDay = currentDate.getDate();
-                v = localStorage.getItem("date")
+                var get_date = localStorage.getItem("date")
                 // 创建一个表示要判断的时间的 Date 对象
-                const targetDate = new Date(v);  // 这里假设要判断的时间是 2023 年 2 月 25 日
-                //console.log(v);
+                const targetDate = new Date(get_date);
                 // 获取要判断的时间的年份、月份、日期
                 const targetYear = targetDate.getFullYear();
                 const targetMonth = targetDate.getMonth() + 1;
@@ -83,8 +82,6 @@
                 }
                 // 判断年份、月份、日期是否都相等
                 if (currentYear === targetYear && currentMonth === targetMonth && currentDay === targetDay) {
-                    //console.log('要判断的时间是今天');
-
                     var l = localStorage.getItem("name");
 
                     if (l == null) {
@@ -97,8 +94,6 @@
                     return 1;
                 }
                 else {
-                    //console.log('要判断的时间不是今天');
-
                     var l = localStorage.getItem("name");
                     if (l == null) {
 
@@ -106,7 +101,6 @@
                     else {
                         var oB = document.getElementById("pid");
                         oB.innerHTML = l + "~" + dateState() + "~喵,今天还没签到~喵,累计签到了" + day + "天~喵"
-                        da = 0;
                         return 0;
                     }
                 }
@@ -160,11 +154,13 @@
                     </span>
                 </td>
             </tr>
+        </table>
+        <table cellspacing="0" width="1480px">
             <tr class="trdata1">
                 <td class="folder">
                     <span class="nobr">
                         <nobr>
-                            <a href="/">返回主页</a>
+                            <a href="/new/index.html">返回主页</a>
                         </nobr>
                     </span>
                 </td>
