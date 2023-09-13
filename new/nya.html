@@ -16,7 +16,7 @@
             猫娘
         </nobr>
         <nobr>
-            <a href="/new/setting.html">设置</a>
+            <a href="/new/nya_setting.html">设置</a>
         </nobr>
         <style>
             input {
@@ -25,10 +25,8 @@
                 font-size: 20px;
             }
         </style>
-        <canvas id="myCanvas" width="200" height="100">
-        </canvas>
         <script>
-            function dateState(date = new Date()) {
+                       function dateState(date = new Date()) {
                 // 获取当前小时
                 let hours = date.getHours()
                 if (hours >= 6 && hours < 12) {
@@ -42,10 +40,7 @@
             function mo() {
                 var s = ["喵！才……才不是要被摸摸呢（傲娇）", "呼噜呼噜……喵！怎么是你！我才不要你摸！", "喵……suki", "喵……喵……想要……", "喵……想要更多哦喵……"];
                 const randomNum = Math.floor(Math.random() * 5);;
-                var canvas = document.getElementById("myCanvas");
-                if (canvas.getContext) {
-                    alert(s[randomNum]);
-                }
+                alert(s[randomNum]);
             }
             function nya() {
                 var audio = new Audio('/nya.mp3');
@@ -54,10 +49,7 @@
             function baka() {
                 var audio = new Audio('/baka.mp3');
                 audio.play();
-                var canvas = document.getElementById("myCanvas");
-                if (canvas.getContext) {
-                    alert("喵!主人大笨蛋!");
-                }
+                alert("喵!主人大笨蛋!");
             }
             function fun() {
                 const currentDate = new Date();
@@ -111,11 +103,7 @@
                 var day1 = day += 1;
                 if (fun() == 0) {
                     var call = localStorage.getItem("name");
-                    var canvas = document.getElementById("myCanvas");
-                    if (canvas.getContext) {
-
-                        alert(call + "~签到成功~喵");
-                    }
+                    alert(call + "~签到成功~喵");
                     localStorage.setItem("qiandao", "1");
                     localStorage.setItem("date", new Date());
                     localStorage.setItem("day", day1);
@@ -124,11 +112,7 @@
                 else {
                     if (fun() == 1) {
                         var call = localStorage.getItem("name");
-                        var canvas = document.getElementById("myCanvas");
-                        if (canvas.getContext) {
-
-                            alert(call + "~今天签到过了~喵");
-                        }
+                        alert(call + "~今天签到过了~喵");
                     }
                 }
                 window.location.reload();
