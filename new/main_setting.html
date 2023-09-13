@@ -9,12 +9,12 @@
     <style>
         select{
             height: 50px;
-            width: 300px;
+            width: 350px;
             font-size: 20px;
         }
         input{
             height: 50px;
-            width: 300px;
+            width: 350px;
             font-size: 20px;
         }
     </style>
@@ -52,6 +52,20 @@
                 }
             }
         }
+        function custom(){
+            //获取输入框的值
+            var bg_value = document.getElementById("bg_custom").value;
+            if(bg_value == "null")
+            {
+                alert("未输入");   
+            }
+            else
+            {
+                //写入本地存储
+                localStorage.setItem("imgUrl", bg_value);
+                alert("设置成功");
+            }
+            }
     </script>
     <center>
         <br>
@@ -155,6 +169,49 @@
                     <span class="nobr">
                         <nobr>
                             <input type="button" value="点击更改" onclick="bg_reset();">
+                        </nobr>
+
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr> </nobr>
+                    </span>
+                </td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            自定义背景图片链接
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr> </nobr>
+                    </span>
+                </td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <input type="text" id="bg_custom" value="">
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr> </nobr>
+                    </span>
+                </td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <input type="button" value="点击更改" onclick="custom();">
                         </nobr>
 
                     </span>
