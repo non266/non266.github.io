@@ -5,14 +5,48 @@
   <meta name="robots" content="noindex, nofollow">
   <title>蔚蓝档案动态壁纸</title>
   <link rel="stylesheet" href="/main.css" type="text/css">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"></head>
-<body>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body onload="bg_url()">
+    <script>
+        function bg_url(){
+            var sw = localStorage.getItem('bg_switch');
+            //如果为空
+            if (sw == null)
+            {
+                sw = 0;
+                localStorage.setItem('bg_switchl', sw);
+            }
+            else
+            {
+                if(sw == 0)
+                {
+                    return 0;
+                }
+                if(sw == 1)
+                {
+                    var imgUrl = localStorage.getItem('imgUrl');
+                    console.log(sw);
+                    if (imgUrl == null) {
+                    //随机获取图片
+                    imgUrl = 'https://www.loliapi.com/acg/';
+                    //保存到本地存储
+                    localStorage.setItem('imgUrl', imgUrl);
+                    document.body.style.backgroundImage = 'url(' + imgUrl + ')';
+                    }
+                    else {
+                    document.body.style.backgroundImage = 'url(' + imgUrl + ')';
+                    }
+                }   
+            }
+        }
+    </script>
     <center>
-        <a href="/">
-            <img class="logo" src="/b_4724fb8eab31cab7a004c2e8f8bdd8a1.jpg" alt="のんの">
-        </a>
         <br>
         <br>
+        <nobr>
+            のんの
+        </nobr>
         <table cellspacing="0" width="1480px">
             <tr>
                 <td colspan="3" class="lineshadow" height="1"></td>
@@ -193,7 +227,7 @@
                 <td class="folder">
                     <span class="nobr">
                         <nobr>
-                            <a href="/bzxz.html">动态壁纸下载</a>
+                            <a href="/new/bzxz.html">动态壁纸下载</a>
                         </nobr>
                     </span>
                 </td>

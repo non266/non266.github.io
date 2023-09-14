@@ -23,8 +23,11 @@
             }
         </style>
         <script>
+            //获取id为1的元素
             function fun() {
+                //获取id为1的元素的值
                 var oB = document.getElementById("1").value;
+                //将获取的值存入localStorage
                 localStorage.setItem("name", oB);
                 alert("设置成功");
             }
