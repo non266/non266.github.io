@@ -6,6 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 <link rel="stylesheet" href="/main2.css"> 
+<link rel="stylesheet" href="/cplayer.css">
+<link rel="stylesheet" href="/live2d.css">
+<script>
+  var live2d_Path = "./"
+  var home_Path = "./"
+</script>
+
 <noscript>
 
 </noscript> 
@@ -106,5 +113,22 @@
 <script src="/js/breakpoints.min.js"></script> 
 <script src="/js/util.js"></script> 
 <script src="/js/main.js"></script>  
+<div id="cplayerland">
+    <button id="hide-cplayer-button" style="background-image: url('/btn.png');"></button>
+    <div id="cplayerapp"></div>
+</div>
+<script src="/js/hide.js"></script>
+<script src="/js/cplayer.js"></script>
+<script src="/js/player_list.js"></script>
+<div id="landlord">                                                       
+  <div class="message" style="opacity:0"></div>                         
+  <canvas id="live2d" width="280" height="250" class="live2d"></canvas> 
+  <div class="hide-live2d-button">hide</div>                                   
+</div>
+                                                                  
+<script src="/js/jquery.min.js"></script>           
+<script src="/js/live2d.js" ></script>            
+<script src="/js/message.js"></script>           
+<script src="/js/loadmodel.js"></script> 
 </body>
 </html>
