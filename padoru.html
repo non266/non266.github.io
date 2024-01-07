@@ -7,23 +7,21 @@
   <link rel="stylesheet" href="/main.css" type="text/css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body onload="">
+<body onload="padoru()">
     <script>
         function padoru(){
-            //获取屏幕大小
             var screenWidth = window.screen.width;
             var screenHeight = window.screen.height;
-            //创建img
-            var img = document.createElement("img");
-            img.src = "/padoru/padoru.gif";
-            img.id = "padoru";
-            //移动img
-            while(true){
-            var img = document.getElementById("padoru");
-            img.style.position = "absolute";
-            img.style.left = screenWidth - Math.random()*500 + "px";
-            img.style.top = screenHeight - Math.random()*500 + "px";
-            }
+            var padoru = document.getElementById("padoru");
+            padoru.style.position = "absolute";
+            padoru.style.left = Math.floor(Math.random()*screenWidth) + "px";
+            padoru.style.top = Math.floor(Math.random()*screenHeight) + "px";
+            setTimeout("padoru()", 100);
+            var audio = document.getElementsByTagName("audio")[0];
+            audio.play();
+            return false;
         }
     </script>
+    <img src="/padoru/padoru.gif" id="padoru">
+    <audio src="/padoru/padoru.wav" id="audio"></audio>
 </body>
