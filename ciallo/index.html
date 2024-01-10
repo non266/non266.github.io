@@ -16,6 +16,10 @@
         left: 0;
         right: 0;
     }
+    body {
+      user-select: none;
+    }
+  </style>
 </style>
 <body>
     <div>
@@ -49,7 +53,8 @@
     let a_idx = 0;
 
     let ac = new AudioContext();
-
+    //禁止选中文字
+    document.onselectstart = function () { return false; };
     $(function (){
         $("body").click(function(e) {
             const a = new Array("Ciallo～(∠・ω< )⌒★", "Ciallo～(∠・ω< )⌒☆");
