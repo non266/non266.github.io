@@ -1,0 +1,38 @@
+{
+    "mouseover": [
+        {
+            "selector": ".title a",
+            "text": ["Do you want to take a look {text} ?"]
+        },
+        {
+            "selector": ".searchbox",
+            "text": ["What are you looking for? Do you need any help?"]
+        },
+        
+        {
+            "selector": ".__dumi-default-search",
+            "text": ["What are you looking for? Do you need any help?"]
+        },
+        {
+            "selector":".__dumi-default-menu-inner ul li a",
+            "text": ["Do you want to take a look {text} ?"]
+        },
+        {
+            "selector":".__dumi-default-navbar nav span a",
+            "text": ["Do you want to take a look {text} ?"]
+        }
+    ],
+    "click": [
+        {
+            "selector": "#landlord #live2d",
+            "text": [
+                "Don't move your hands or feet! Quickly take your hands away~~", 
+                "Really... really shameless!",
+                "Hentai!",
+                "If I touch again, I'll call the police!⌇●﹏●⌇", 
+                "911? There's a pervert here who keeps touching me(ó﹏ò｡)",
+                "Hello, hello, are you looking for me"
+            ]
+        }
+    ]
+}

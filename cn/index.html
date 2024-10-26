@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh_CN">
+
+<head>
+    <title>のんの</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/main2.css">
+    <!--
+    <link rel="stylesheet" href="/cplayer.css">
+    -->
+    <link rel="stylesheet" href="/live2d.css">
+    <script>
+        var live2d_Path = "/"
+        var home_Path = "/"
+    </script>
+    <script>
+        function bg_url() {
+            var sw = localStorage.getItem('bg_switch');
+            //如果为空
+            if (sw == null) {
+                sw = 0;
+                localStorage.setItem('bg_switchl', sw);
+            }
+            else {
+                if (sw == 0) {
+
+                }
+                if (sw == 1) {
+                    var imgUrl = localStorage.getItem('imgUrl');
+                    if (imgUrl == null) {
+                        //随机获取图片
+                        imgUrl = 'https://www.loliapi.com/acg/';
+                        //保存到本地存储
+                        localStorage.setItem('imgUrl', imgUrl);
+                        document.body.style.backgroundImage = 'url(' + imgUrl + ')';
+                    }
+                    else {
+                        document.body.style.backgroundImage = 'url(' + imgUrl + ')';
+                    }
+                }
+            }
+        }
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?2bfe99c3d9f44e09ca1a2ac5a769294c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body class="is-preload" onload="bg_url()">
+    <script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/1729615676106" key="1729615676106" m="1"></script>
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <img src="/b_4724fb8eab31cab7a004c2e8f8bdd8a1.jpg" class="logo">
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>のんの的主页</h1>
+                    <p>( • ̀ω•́ )✧</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/non266/non266.github.io" target="_blank"></i>本网页github仓库</a></li>
+                    <li><a href="/cn/suiji.html" target="_blank"></i>随机二次元图片</a></li>
+                    <li><a href="/cn/ba_bizhi.html" target="_blank">蔚蓝档案动态壁纸(电脑)</a></li>
+                    <li><a href="/cn/nya.html" target="_blank">猫娘</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="inner">
+                    <h1></h1>
+                    <p>( • ̀ω•́ )✧</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/cn/main_setting.html" target="_blank"></i>页面设置</a></li>
+                    <li><a href="/cn/sese.html" target="_blank"></i>是涩涩的？</a></li>
+                    <li><a href="/cn/games.html" target="_blank">小游戏</a></li>
+                    <li><a href="/padoru.html" target="_blank">padoru</a></li>
+                    <li><a href="/ciallo/index.html" target="_blank"></i>Ciallo～(∠・ω< )⌒★</a></li>
+                    <li><a href="/cn/random_password.html" target="_blank"></i>随机密码生成器</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="inner">
+                    <h1></h1>
+                    <p>小马</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/kitasan/index.html" target="_blank"></i>小北</a></li>
+                    <li><a href="/tannhauser/index.html" target="_blank"></i>傻了吧唧</a></li>
+                    <li><a href="/rice/index.html" target="_blank"></i>大米洗澡</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">2023-2024</p>
+        </footer>
+    </div>
+    <!-- BG -->
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+    <!--
+    <div id="cplayerland">
+        <button id="hide-cplayer-button" style="background-image: url('/btn.png');"></button>
+        <div id="cplayerapp"></div>
+    </div>
+    <script src="/js/hide.js"></script>
+    <script src="/js/cplayer.js"></script>
+    <script src="/js/player_list.js"></script>
+    -->
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <!--
+        <div class="hide-live2d-button">hide</div>
+        -->
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/live2d.js"></script>
+    <script src="/js/message.js"></script>
+    <script src="/js/loadmodel.js"></script>
+</body>
+
+</html>

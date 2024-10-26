@@ -1,0 +1,270 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=512">
+  <title>随机图片</title>
+  <link rel="stylesheet" href="/main.css" type="text/css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body onload="bg_url()">
+    <script>
+        function bg_url(){
+            var sw = localStorage.getItem('bg_switch');
+            //如果为空
+            if (sw == null)
+            {
+                sw = 0;
+                localStorage.setItem('bg_switchl', sw);
+            }
+            else
+            {
+                if(sw == 0)
+                {
+                    return 0;
+                }
+                if(sw == 1)
+                {
+                    var imgUrl = localStorage.getItem('imgUrl');
+                    console.log(sw);
+                    if (imgUrl == null) {
+                    //随机获取图片
+                    imgUrl = 'https://www.loliapi.com/acg/';
+                    //保存到本地存储
+                    localStorage.setItem('imgUrl', imgUrl);
+                    document.body.style.backgroundImage = 'url(' + imgUrl + ')';
+                    }
+                    else {
+                    document.body.style.backgroundImage = 'url(' + imgUrl + ')';
+                    }
+                }   
+            }
+        }
+    </script>
+    <center>
+        <br>
+        <br>
+        <nobr>
+            のんの
+        </nobr>
+        <table cellspacing="0" width="1480px">
+            <tr>
+                <td colspan="3" class="lineshadow" height="1"></td>
+            </tr>
+            <tr class="trdata2">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="/yulan.html">直接全部预览</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="https://iw233.cn/api.php?sort=random">MirlKoi API接口</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+            <tr class="trdata2">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="https://api.yimian.xyz/img?type=moe">Ushio API接口</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+            <tr class="trdata2">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="https://t.mwm.moe/ycy">次元API-举个栗子</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+            <tr class="trdata2">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="https://api.ghser.com/random/api.php">三秋API接口站</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+            <tr class="trdata2">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="https://www.loliapi.com/acg/">LoliAPI</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+            <tr class="trdata2">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="https://api.suyanw.cn/api/comic/api.php">素颜Api</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+            <tr class="trdata2">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="https://api.vvhan.com/api/acgimg">韩小韩API</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+            <tr class="trdata2">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="https://moe.jitsu.top/api">jitsu API</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+            <tr class="trdata2">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="/cn">返回主页</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br>
+    </center>
+</body>

@@ -1,0 +1,38 @@
+{
+    "mouseover": [
+        {
+            "selector": ".title a",
+            "text": ["{text} を見てみましょうか"]
+        },
+        {
+            "selector": ".searchbox",
+            "text": ["何を探していますか。手伝いましょうか。"]
+        },
+        
+        {
+            "selector": ".__dumi-default-search",
+            "text": ["何を探していますか。手伝いましょうか。"]
+        },
+        {
+            "selector":".__dumi-default-menu-inner ul li a",
+            "text": ["{text} を見てみましょうか"]
+        },
+        {
+            "selector":".__dumi-default-navbar nav span a",
+            "text": ["{text} を見てみましょうか"]
+        }
+    ],
+    "click": [
+        {
+            "selector": "#landlord #live2d",
+            "text": [
+                "足を動かすな！早く手を離せ~~", 
+                "本当に…本当に恥知らず！",
+                "Hentai！",
+                "また触ったら警察に通報するぞ！⌇●﹏●⌇", 
+                "110ですか、ここで変態がずっと私を触っています(ó﹏ò｡)",
+                "hello hello，私を探してるの？"
+            ]
+        }
+    ]
+}

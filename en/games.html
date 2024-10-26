@@ -1,0 +1,120 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=512">
+  <title>のんの</title>
+  <link rel="stylesheet" href="/main.css" type="text/css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body onload="bg_url()">
+    <script>
+        function bg_url(){
+            var sw = localStorage.getItem('bg_switch');
+            if (sw == null)
+            {
+                sw = 0;
+                localStorage.setItem('bg_switchl', sw);
+            }
+            else
+            {
+                if(sw == 0)
+                {
+                    return 0;
+                }
+                if(sw == 1)
+                {
+                    var imgUrl = localStorage.getItem('imgUrl');
+                    console.log(sw);
+                    if (imgUrl == null) {
+                    imgUrl = 'https://www.loliapi.com/acg/';
+                    localStorage.setItem('imgUrl', imgUrl);
+                    document.body.style.backgroundImage = 'url(' + imgUrl + ')';
+                    }
+                    else {
+                    document.body.style.backgroundImage = 'url(' + imgUrl + ')';
+                    }
+                }   
+            }
+        }
+    </script>
+    <center>
+        <br>
+        <br>
+        <nobr>
+            のんの
+        </nobr>
+        <table cellspacing="0" width="1480px">
+            <tr>
+                <td colspan="3" class="lineshadow" height="1"></td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="/games/hechengdaxigua/index.html">合成大西瓜</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+            <tr class="trdata2">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="/public/index.html">人生重开模拟器</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="/en">return home page</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+                <td class="modifieddata">
+                    <span class="nobr">
+                        <nobr>
+                            <span class="nobr">
+                                <nobr></nobr>
+                            </span>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br>
+    </center>
+</body>

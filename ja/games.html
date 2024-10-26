@@ -10,7 +10,6 @@
     <script>
         function bg_url(){
             var sw = localStorage.getItem('bg_switch');
-            //如果为空
             if (sw == null)
             {
                 sw = 0;
@@ -27,9 +26,7 @@
                     var imgUrl = localStorage.getItem('imgUrl');
                     console.log(sw);
                     if (imgUrl == null) {
-                    //随机获取图片
                     imgUrl = 'https://www.loliapi.com/acg/';
-                    //保存到本地存储
                     localStorage.setItem('imgUrl', imgUrl);
                     document.body.style.backgroundImage = 'url(' + imgUrl + ')';
                     }
@@ -96,7 +93,7 @@
                 <td class="folder">
                     <span class="nobr">
                         <nobr>
-                            <a href="/">返回主页</a>
+                            <a href="/ja">ホームに戻る</a>
                         </nobr>
                     </span>
                 </td>

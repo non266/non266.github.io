@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=512">
+  <title>padoru</title>
+  <link rel="stylesheet" href="/main.css" type="text/css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body onload="padoru()">
+    <script>
+        function padoru(){
+            var screenWidth = window.screen.width;
+            var screenHeight = window.screen.height;
+            var padoru = document.getElementById("padoru");
+            padoru.style.position = "absolute";
+            padoru.style.left = Math.floor(Math.random()*screenWidth) + "px";
+            padoru.style.top = Math.floor(Math.random()*screenHeight) + "px";
+            setTimeout("padoru()", 100);
+            var audio = document.getElementsByTagName("audio")[0];
+            audio.play();
+            return false;
+        }
+    </script>
+    <img src="/padoru/padoru.gif" id="padoru">
+    <audio src="/padoru/padoru.wav" id="audio"></audio>
+</body>

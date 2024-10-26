@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=512">
+    <meta name="robots" content="noindex, nofollow">
+    <title>のんの</title>
+    <link rel="stylesheet" href="/main.css" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        select{
+            height: 50px;
+            width: 350px;
+            font-size: 20px;
+        }
+        input{
+            height: 50px;
+            width: 350px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body onload="fun()"> 
+    <script>
+        function bg_switch(){
+            var bg_value = document.getElementById("bg_select").value;
+            if(bg_value == "null")
+            {
+                alert("選択されていません");
+            }
+            else
+            {
+                localStorage.setItem("bg_switch", bg_value);
+                alert("設定に成功しました");
+            }
+            window.location.reload();
+        }
+        function bg_reset(){
+                var bg_value = document.getElementById("bg_url").value;
+                if(bg_value == "null")
+                {
+                alert("選択されていません");
+                }
+                else
+                {
+                localStorage.setItem("imgUrl", bg_value);
+                alert("設定に成功しました");
+                }
+                window.location.reload();
+        }
+        function custom(){
+            var bg_value = document.getElementById("bg_custom").value;
+            if(bg_value == "null")
+            {
+                alert("未入力");   
+            }
+            else
+            {
+                localStorage.setItem("imgUrl", bg_value);
+                alert("設定に成功しました");
+            }
+            window.location.reload();
+        }
+        function fun(){
+            var oB = document.getElementById("1");
+            var oB1 = document.getElementById("2");
+            var s = localStorage.getItem("bg_switch");
+            var u = localStorage.getItem("imgUrl");
+            if (s == 1)
+            {
+                oB.innerHTML = "ランダムな背景画像をオンにするかどうか（現在はオン）"
+            }
+            if (s == 0)
+            {
+                oB.innerHTML = "ランダムな背景画像をオンにするかどうか（現在はオフ）"
+            }
+            if (u == null)
+            {
+
+            }
+            else
+            {
+                oB1.innerHTML = "現在の背景画像のリンクは次のとおりです：" + u;
+            }
+        }
+    </script>
+    <center>
+        <br>
+        <br>
+        <nobr>
+            ページ設定
+        </nobr>
+        <table cellspacing="0" width="1480px">
+            <tr>
+                <td colspan="3" class="lineshadow" height="1"></td>
+            </tr>
+            <table cellspacing="0" width="1480px">
+                <tr class="trdata1">
+                    <td class="folder">
+                        <span class="nobr">
+                            <nobr >
+                                <p id="1">ランダムな背景画像をオンにするか</p>
+                            </nobr>
+                        </span>
+                    </td>
+                    <td class="sizedata">
+                        <span class="nobr">
+                            <nobr> </nobr>
+                        </span>
+                    </td>
+                </tr>
+                <tr class="trdata1">
+                    <td class="folder">
+                        <span class="nobr">
+                            <nobr>
+                                <select id="bg_select">
+                                    <option value= 'null' selected="selected">せんたく</option>
+                                    <option value="1">開く</option>
+                                    <option value="0">閉じる</option>
+                                </select>
+                            </nobr>
+    
+                        </span>
+                    </td>
+                    <td class="sizedata">
+                        <span class="nobr">
+                            <nobr> </nobr>
+                        </span>
+                    </td>
+                </tr>
+                <tr class="trdata1">
+                    <td class="folder">
+                        <span class="nobr">
+                            <nobr>
+                                <input type="button" value="クリックして変更" onclick="bg_switch();">
+                            </nobr>
+    
+                        </span>
+                    </td>
+                    <td class="sizedata">
+                        <span class="nobr">
+                            <nobr> </nobr>
+                        </span>
+                    </td>
+                </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <p>背景画像リンク</p>
+                            <p id="2"></p>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr> </nobr>
+                    </span>
+                </td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <select id="bg_url">
+                                <option value= 'null' selected="selected">せんたく</option>
+                                <option value="https://api.yimian.xyz/img?type=moe">Ushio API接口</option>
+                                <option value="https://t.mwm.moe/ycy">次元API-举个栗子</option>
+                                <option value="https://api.ghser.com/random/api.php">三秋API接口站</option>
+                                <option value="https://www.loliapi.com/acg/">LoliAPI</option>
+                                <option value="https://api.suyanw.cn/api/comic/api.php">素颜Api</option>
+                                <option value="https://api.vvhan.com/api/acgimg">韩小韩API</option>
+                                <option value="https://moe.jitsu.top/api">jitsu API</option>
+                            </select>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr> </nobr>
+                    </span>
+                </td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <input type="button" value="クリックして変更" onclick="bg_reset();">
+                        </nobr>
+
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr> </nobr>
+                    </span>
+                </td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            背景画像リンクのカスタマイズ
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr> </nobr>
+                    </span>
+                </td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <input type="text" id="bg_custom" value="">
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr> </nobr>
+                    </span>
+                </td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <input type="button" value="クリックして変更" onclick="custom();">
+                        </nobr>
+
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr> </nobr>
+                    </span>
+                </td>
+            </tr>
+            <tr class="trdata1">
+                <td class="folder">
+                    <span class="nobr">
+                        <nobr>
+                            <a href="/ja">ホームに戻る</a>
+                        </nobr>
+                    </span>
+                </td>
+                <td class="sizedata">
+                    <span class="nobr">
+                        <nobr></nobr>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
